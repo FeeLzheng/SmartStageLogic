@@ -27,17 +27,17 @@ public class attendanceTest extends BaseTestCase{
 	}
 	
 	
-//	public static void main(String[] args){
-//		junit.textui.TestRunner.run(suite());//字符界面
-//	}
-//	
-//	
-//	public static TestSuite suite(){
-//		TestSuite suite = new TestSuite();
-//		suite.addTest(new attendanceTest("test1_1"));
-//	    System.out.print(suite);
-//		return suite;
-//	}
+	public static void main(String[] args){
+		junit.textui.TestRunner.run(suite());//字符界面
+	}
+	
+	
+	public static TestSuite suite(){
+		TestSuite suite = new TestSuite();
+		suite.addTest(new attendanceTest("test1_1"));
+	    System.out.print(suite);
+		return suite;
+	}
 	
 	@Test
 	public void test1_1() throws Exception{
@@ -2958,23 +2958,23 @@ public class attendanceTest extends BaseTestCase{
 		public void test1_177() throws Exception{
 			
 			
-			t1_1=COMPLICATED_DATE_FORMAT.parse("2017-03-31"+" "+"09:59:00");
-			t1_2=COMPLICATED_DATE_FORMAT.parse("2017-03-31"+" "+"10:11:00");
+			t1_1=COMPLICATED_DATE_FORMAT.parse("2017-04-28"+" "+"09:10:00");
+			t1_2=COMPLICATED_DATE_FORMAT.parse("2017-04-28"+" "+"17:10:00");
 //			t1_1=null;
 //			t1_2=null;
-			t1_3=COMPLICATED_DATE_FORMAT.parse("2017-03-31"+" "+"13:31:00");
-			t1_4=COMPLICATED_DATE_FORMAT.parse("2017-03-31"+" "+"16:11:00");
-			t1_5=COMPLICATED_DATE_FORMAT.parse("2017-03-31"+" "+"20:30:00");
-			t1_6=COMPLICATED_DATE_FORMAT.parse("2017-04-01"+" "+"01:11:00");
+//			t1_3=COMPLICATED_DATE_FORMAT.parse("2017-03-21"+" "+"13:31:00");
+//			t1_4=COMPLICATED_DATE_FORMAT.parse("2017-03-21"+" "+"16:11:00");
+//			t1_5=COMPLICATED_DATE_FORMAT.parse("2017-03-21"+" "+"20:30:00");
+//			t1_6=COMPLICATED_DATE_FORMAT.parse("2017-03-22"+" "+"01:11:00");
 			caseNo = buildCaseNoFromMethodName(Thread.currentThread().getStackTrace()[1].getMethodName());
 			
 			
-			dao.deleteAttendanceOneDay("2017-04-01", 100000004, 52);
-//			dao.deleteAttendanceOneDay("2017-03-31", 100000005, 52);
-			dao.deleteAttendanceOneDay("2017-03-31", 100000004, 52);
-//			dao.deleteAttendanceOneDay("2017-04-01", 100000005, 52);
-			dao.deleteEmployeDayoneDay(100000004, 52, "2017-04-01");
-			dao.deleteEmployeDayoneDay(100000004, 52, "2017-03-31");
+//			dao.deleteAttendanceOneDay("2017-03-21", 100000004, 52);
+//			dao.deleteAttendanceOneDay("2017-03-25", 100000005, 52);
+//			dao.deleteAttendanceOneDay("2017-03-22", 100000004, 52);
+//			dao.deleteAttendanceOneDay("2017-03-25", 100000005, 52);
+//			dao.deleteEmployeDayoneDay(100000004, 52, "2017-03-25");
+//			dao.deleteEmployeDayoneDay(100000004, 52, "2017-03-26");
 //			dao.deleteEmployeDayoneDay(100000005, 52, "2017-04-02");
 //			dao.deleteEmployeDayoneDay(100000005, 52, "2017-04-01");
 			
@@ -2982,8 +2982,8 @@ public class attendanceTest extends BaseTestCase{
 //			dao.UpdateRule(ruleId3, employeeId);
 			if(t1_1!=null||t1_2!=null){
 			attendanceCreate(1);
-			attendanceCreate(2);
-			attendanceCreate(3);
+//			attendanceCreate(2);
+//			attendanceCreate(3);
 			}else{
 				Date createoneday=SIMPLE_DATE_FORMAT.parse("2017-03-31");
 				CreateRecreationModel createrecreation =new CreateRecreationModel();

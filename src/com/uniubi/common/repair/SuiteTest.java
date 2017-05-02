@@ -41,9 +41,9 @@ public class SuiteTest extends TestCase{
 ////		suite.addTest(new JUnit4TestAdapter(attendanceTest.class));
 //		suite.addTest(new repairTest("test1_1"));	
 //		suite.addTest(new repairTest("test1_2"));	
-//		suite.addTest(new repairTest("test1_3"));	
-		suite.addTest(new repairTest("test1_4"));	
-//		suite.addTest(new repairTest("test1_5"));
+		suite.addTest(new repairTest("test1_3"));	
+//		suite.addTest(new repairTest("test1_4"));	
+		suite.addTest(new repairTest("test1_5"));
 //		suite.addTest(new repairTest("test1_6"));
 //		suite.addTest(new repairTest("test1_7"));
 //		suite.addTest(new repairTest("test1_8"));	

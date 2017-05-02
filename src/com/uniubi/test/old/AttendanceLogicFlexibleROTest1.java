@@ -119,11 +119,11 @@ public class AttendanceLogicFlexibleROTest1 extends OldBaseTestCase{
 //		suite.addTest(new AttendanceLogicFlexibleROTest1("Test3_2"));
 //		suite.addTest(new AttendanceLogicFlexibleROTest1("Test3_3"));
 //////	
-		suite.addTest(new AttendanceLogicFlexibleROTest1("Test4_1"));
-		suite.addTest(new AttendanceLogicFlexibleROTest1("Test4_2"));
-		suite.addTest(new AttendanceLogicFlexibleROTest1("Test4_3"));
-		suite.addTest(new AttendanceLogicFlexibleROTest1("Test4_4"));
-		suite.addTest(new AttendanceLogicFlexibleROTest1("Test4_5"));
+//		suite.addTest(new AttendanceLogicFlexibleROTest1("Test4_1"));
+//		suite.addTest(new AttendanceLogicFlexibleROTest1("Test4_2"));
+//		suite.addTest(new AttendanceLogicFlexibleROTest1("Test4_3"));
+//		suite.addTest(new AttendanceLogicFlexibleROTest1("Test4_4"));
+//		suite.addTest(new AttendanceLogicFlexibleROTest1("Test4_5"));
 		
 		//5、6、7三类全是特殊情况，手动测试。
 		

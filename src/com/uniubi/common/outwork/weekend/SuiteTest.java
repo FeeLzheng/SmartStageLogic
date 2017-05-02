@@ -41,18 +41,18 @@ public class SuiteTest extends TestCase{
 ////		suite.addTest(new JUnit4TestAdapter(attendanceTest.class));
 //		suite.addTest(new outworkTest("test1_1"));	
 //		suite.addTest(new outworkTest("test1_2"));	
-		suite.addTest(new outworkTest("test1_3"));	
+//		suite.addTest(new outworkTest("test1_3"));	
 		suite.addTest(new outworkTest("test1_4"));	
-		suite.addTest(new outworkTest("test1_5"));
+//		suite.addTest(new outworkTest("test1_5"));
 		suite.addTest(new outworkTest("test1_6"));
 		suite.addTest(new outworkTest("test1_7"));
-		suite.addTest(new outworkTest("test1_8"));	
-		suite.addTest(new outworkTest("test1_9"));	
-		suite.addTest(new outworkTest("test1_10"));
-		suite.addTest(new outworkTest("test1_11"));
-		suite.addTest(new outworkTest("test1_12"));
-		suite.addTest(new outworkTest("test1_13"));	
-		suite.addTest(new outworkTest("test1_14"));	
+//		suite.addTest(new outworkTest("test1_8"));	
+//		suite.addTest(new outworkTest("test1_9"));	
+//		suite.addTest(new outworkTest("test1_10"));
+//		suite.addTest(new outworkTest("test1_11"));
+//		suite.addTest(new outworkTest("test1_12"));
+//		suite.addTest(new outworkTest("test1_13"));	
+//		suite.addTest(new outworkTest("test1_14"));	
 		return suite;
 		
 		

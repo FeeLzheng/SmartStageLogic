@@ -80,7 +80,7 @@ public class CommonProceduretest1101 extends ProcedureBase{
 	public void test2(){
 		assertEquals(employeeday2.getUserid(),userId);
 		assertEquals(employeeday2.getEmployeeid(),employeeId);
-		assertEquals(employeeday2.getWorkShow(),1);
+		assertEquals(employeeday2.getWorkShow(),2);
 		assertEquals(employeeday2.getWorkDur(),0);
 		assertEquals(employeeday2.getAllLeaveDur(),0);
 		assertEquals(employeeday2.getOutWork(),1);
@@ -95,7 +95,7 @@ public class CommonProceduretest1101 extends ProcedureBase{
 	public void test3(){
 		assertEquals(employeeday3.getUserid(),userId);
 		assertEquals(employeeday3.getEmployeeid(),employeeId);
-		assertEquals(employeeday3.getWorkShow(),1);
+		assertEquals(employeeday3.getWorkShow(),2);
 		assertEquals(employeeday3.getWorkDur(),0);
 		assertEquals(employeeday3.getOutWork(),1);
 		assertEquals(employeeday3.getTpye(),3);

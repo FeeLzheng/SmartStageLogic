@@ -23,7 +23,7 @@ public class simpleTest {
 				DATE_FORMAT_SIMPLE);
 		int employeeId = 100000004;
 		int userId = 52;
-		String date1 = "2017-03-29";
+		String date1 = "2017-04-12";
 		System.out.println("生成"+date1+"天的记录且UserID为"+employeeId);
 		CreateRecreationModel createrecreation=null;
 		try {

@@ -37,7 +37,7 @@ public class CommonOutworktest16 extends OutworkBase{
 	public void test3(){
 		assertEquals(employeeday3.getUserid(),userId);
 		assertEquals(employeeday3.getEmployeeid(),employeeId);
-		assertEquals(employeeday3.getWorkShow(),2);
+		assertEquals(employeeday3.getWorkShow(),1);
 		assertEquals(employeeday3.getWorkDur(),0);
 		assertEquals(employeeday3.getAllLeaveDur(),0);
 		assertEquals(employeeday3.getOutWork(),2);
@@ -49,7 +49,7 @@ public class CommonOutworktest16 extends OutworkBase{
 	public void test4(){
 		assertEquals(employeeday4.getUserid(),userId);
 		assertEquals(employeeday4.getEmployeeid(),employeeId);
-		assertEquals(employeeday4.getWorkShow(),2);
+		assertEquals(employeeday4.getWorkShow(),1);
 		assertEquals(employeeday4.getWorkDur(),0);
 		assertEquals(employeeday4.getAllLeaveDur(),0);
 		assertEquals(employeeday4.getOutWork(),2);

@@ -588,7 +588,7 @@ public class ProcedureBaseTestCase extends TestCase {
 						dao.ProcedureCreate(e1_2, f1_2, procedureid2);
 						}
 				}
-				if(No==2){
+				if(No==3){
 					if(e1_3!=null||f1_3!=null){
 						dao.ProcedureCreate(e1_3, f1_3, procedureid3);
 						}

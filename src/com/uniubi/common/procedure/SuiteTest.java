@@ -56,7 +56,7 @@ public class SuiteTest extends TestCase{
 //		suite.addTest(new procedureTest("test1_17"));
 //		suite.addTest(new procedureTest("test1_18"));
 //		suite.addTest(new procedureTest("test1_19"));
-//		suite.addTest(new procedureTest("test1_20"));
+		suite.addTest(new procedureTest("test1_20"));
 //		suite.addTest(new procedureTest("test1_21"));
 //		suite.addTest(new procedureTest("test1_22"));
 //		suite.addTest(new procedureTest("test1_23"));	
@@ -94,7 +94,7 @@ public class SuiteTest extends TestCase{
 //		suite.addTest(new procedureTest("test1_55"));
 //		suite.addTest(new procedureTest("test1_56"));
 //		suite.addTest(new procedureTest("test1_57"));
-		suite.addTest(new procedureTest("test1_58"));
+//		suite.addTest(new procedureTest("test1_58"));
 //		suite.addTest(new procedureTest("test1_59"));
 //		suite.addTest(new procedureTest("test1_60"));
 //		suite.addTest(new procedureTest("test1_61"));

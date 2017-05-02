@@ -19,7 +19,7 @@ public class AttendanceLogicFlexibleROTest1Assert41 extends
 	public void Testx_x_2() {
 		assertEquals(employeeDay.getWorkDur(),0);
 		assertEquals(employeeDay.getDelayDur(),0);
-		assertEquals(employeeDay.getLeaveDur(),0);
+		assertEquals(employeeDay.getLeaveDur(),convertMsToMinutes(t));
 		assertEquals(employeeDay.getAllLeaveDur(),0);
 		assertEquals(employeeDay.getNoShow(),1);
 		assertEquals(employeeDay.getWorkShow(),2);
