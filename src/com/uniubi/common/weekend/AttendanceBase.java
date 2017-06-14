@@ -83,17 +83,21 @@ public class AttendanceBase{
 	
 	public void test1(){
 //		System.out.println("对比分表中的数据");	
+		assertEquals(employeeday1.getdaytype(),2);
 
 		
 	}
 	public void test2(){
-//		System.out.println("对比分表1中的数据");		
+//		System.out.println("对比分表1中的数据");
+		assertEquals(employeeday2.getdaytype(),2);
 	}
 	public void test3(){
 //		System.out.println("对比分表2中的数据");		
+		assertEquals(employeeday3.getdaytype(),2);
 	}
 	public void test4(){
-//		System.out.println("对比分表3中的数据");		
+//		System.out.println("对比分表3中的数据");	
+		assertEquals(employeeday4.getdaytype(),2);
 	}
 	
 	
@@ -104,6 +108,7 @@ public class AttendanceBase{
 		assertEquals(employeeday1.getLeaveEarly(),1);
 		assertEquals(employeeday1.getLeaveDur(),0);
 		assertEquals(employeeday1.getNoShow(),1);
+		assertEquals(employeeday1.getdaytype(),2);
 		
 		
 	}
@@ -115,6 +120,7 @@ public class AttendanceBase{
 		assertEquals(employeeday2.getLeaveEarly(),1);
 		assertEquals(employeeday2.getLeaveDur(),0);
 		assertEquals(employeeday2.getNoShow(),1);
+		assertEquals(employeeday2.getdaytype(),2);
 		
 		
 	}
@@ -126,6 +132,7 @@ public class AttendanceBase{
 		assertEquals(employeeday3.getLeaveEarly(),1);
 		assertEquals(employeeday3.getLeaveDur(),0);
 		assertEquals(employeeday3.getNoShow(),1);
+		assertEquals(employeeday3.getdaytype(),2);
 		
 		
 	}
@@ -137,6 +144,7 @@ public class AttendanceBase{
 		assertEquals(employeeday4.getLeaveEarly(),1);
 		assertEquals(employeeday4.getLeaveDur(),0);
 		assertEquals(employeeday4.getNoShow(),1);
+		assertEquals(employeeday4.getdaytype(),2);
 		
 		
 	}
@@ -146,21 +154,29 @@ public class AttendanceBase{
 		if(No==1){
 			System.out.println("对比总表的数据");
 			test1();
+			System.out.println("今天是休息日");
+			assertEquals(employeeday1.getdaytype(),2);
 			test1_employeeweekend();
 				} 
 		if(No==2){
 			System.out.println("对比分表1中的数据");	
 			test2();
+			System.out.println("今天是休息日");
+			assertEquals(employeeday1.getdaytype(),2);
 			test2_employeeweekend();
 		}
 		if(No==3){
 			System.out.println("对比分表2中的数据");	
 			test3();
+			System.out.println("今天是休息日");
+			assertEquals(employeeday1.getdaytype(),2);
 			test3_employeeweekend();
 		}
 		if(No==4){
 			System.out.println("对比分表3中的数据");	
 			test4();
+			System.out.println("今天是休息日");
+			assertEquals(employeeday1.getdaytype(),2);
 			test4_employeeweekend();
 		}
 		

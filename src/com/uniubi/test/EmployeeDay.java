@@ -47,6 +47,7 @@ public class EmployeeDay{
 	private Date firstTime;
 	private Date lastTime;
 	private int type;
+	private int daytype;
 	
 	private int leaveDur;
 
@@ -396,6 +397,15 @@ public class EmployeeDay{
 		this.type=type;
 	}
 	
+	public int getdaytype(){
+		return daytype;
+		
+		
+	}
+	
+	public void setdaytype(int daytype){
+		this.daytype=daytype;
+	}
 	
 	
 	

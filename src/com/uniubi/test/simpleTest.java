@@ -21,9 +21,9 @@ public class simpleTest {
 		String DATE_FORMAT_SIMPLE = "yyyy-MM-dd";
 		SimpleDateFormat SIMPLE_DATE_FORMAT = new SimpleDateFormat(
 				DATE_FORMAT_SIMPLE);
-		int employeeId = 100000004;
+		int employeeId = 100000007;
 		int userId = 52;
-		String date1 = "2017-04-12";
+		String date1 = "2017-06-02";
 		System.out.println("生成"+date1+"天的记录且UserID为"+employeeId);
 		CreateRecreationModel createrecreation=null;
 		try {

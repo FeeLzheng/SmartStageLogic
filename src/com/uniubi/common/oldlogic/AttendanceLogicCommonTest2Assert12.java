@@ -8,6 +8,8 @@ public class AttendanceLogicCommonTest2Assert12 extends AttendanceLogicCommonTes
 	@Override
 	public void Textx_x_last() {
 		assertEquals(employeeDay.getDelayDur(),0);
+		System.out.println(convertMsToMinutes(e1.getTime()-t1_n.getTime()));
+		System.out.println(convertMsToMinutes((employeeDay.getLeaveDur())));
 		assertEquals(employeeDay.getLeaveDur(),convertMsToMinutes(e1.getTime()-t1_n.getTime()));
 		assertEquals(employeeDay.getAllLeaveDur(),convertMsToMinutes(B1.getTime()-e1.getTime()+f2.getTime()-e2.getTime()));
 		

@@ -35,6 +35,10 @@ import com.uniubi.common.oldlogic.AttendanceLogicCommonTest1AssertBase;
  */
 public class AttendanceLogicCommonTest1 extends OldBaseTestCase{
 
+	
+	private static byte type1=3;//流程类别。1-病假;2-事假;3-产假;4-年假;8-特殊假;5-补签;6-出差;7-其他;
+	private static byte type2=4;//流程类别。1-病假;2-事假;3-产假;4-年假;8-特殊假;5-补签;6-出差;7-其他;
+	
 	public AttendanceLogicCommonTest1(String name){
 		super(name);
 		try {
@@ -393,7 +397,7 @@ public class AttendanceLogicCommonTest1 extends OldBaseTestCase{
 		
 		
 		//更新流程
-		dao.ProcedureCreate(e1,f1,procedureId1);
+		dao.ProcedureCreate(e1,f1,procedureId1,employeeId,type1);
 		
 		attendancesCreate(1);
 		
@@ -408,7 +412,7 @@ public class AttendanceLogicCommonTest1 extends OldBaseTestCase{
 		AttendanceLogicCommonTest1AssertBase.getInstance( A1, B1, t1_1, t1_n, e1, f1, e2, f2,employeeDay,caseNo).Testx_x(1);
 		if(e2 != null && f2 != null){
 			//更新第二个流程
-			dao.ProcedureCreate(e2,f2,procedureId2);
+			dao.ProcedureCreate(e2,f2,procedureId2,employeeId,type2);
 			
 
 			
@@ -433,7 +437,7 @@ public class AttendanceLogicCommonTest1 extends OldBaseTestCase{
 	
 		
 		//更新流程
-		dao.ProcedureCreate(e1,f1,procedureId1);
+		dao.ProcedureCreate(e1,f1,procedureId1,employeeId,type1);
 		
 
 		
@@ -447,7 +451,7 @@ public class AttendanceLogicCommonTest1 extends OldBaseTestCase{
 		AttendanceLogicCommonTest1AssertBase.getInstance( A1, B1, t1_1, t1_n, e1, f1, e2, f2,employeeDay,caseNo).Testx_x(1);
 		if(e2 != null && f2 != null){
 			//更新第二个流程
-			dao.ProcedureCreate(e2,f2,procedureId2);
+			dao.ProcedureCreate(e2,f2,procedureId2,employeeId,type2);
 			
 
 			employeeDay = dao.getEmployeeDay(userId,employeeId,day,1); 

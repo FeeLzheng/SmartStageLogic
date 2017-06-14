@@ -38,12 +38,12 @@ public class SuiteTest extends TestCase{
 //		suite.addTestSuite(procedureTest.class);
 ////		suite.addTest(new JUnit4TestAdapter(procedureTest.class));
 //		suite.addTest(new procedureTest("test1_1"));	
-//		suite.addTest(new procedureTest("test1_2"));	
-//		suite.addTest(new procedureTest("test1_3"));	
-//		suite.addTest(new procedureTest("test1_4"));	
-//		suite.addTest(new procedureTest("test1_5"));
-//		suite.addTest(new procedureTest("test1_6"));
-//		suite.addTest(new procedureTest("test1_7"));
+		suite.addTest(new procedureTest("test1_2"));	
+		suite.addTest(new procedureTest("test1_3"));	
+		suite.addTest(new procedureTest("test1_4"));	
+		suite.addTest(new procedureTest("test1_5"));
+		suite.addTest(new procedureTest("test1_6"));
+		suite.addTest(new procedureTest("test1_7"));
 //		suite.addTest(new procedureTest("test1_8"));	
 //		suite.addTest(new procedureTest("test1_9"));	
 //		suite.addTest(new procedureTest("test1_10"));
@@ -137,7 +137,7 @@ public class SuiteTest extends TestCase{
 //		suite.addTest(new procedureTest("test1_98"));
 //		suite.addTest(new procedureTest("test1_99"));
 //		suite.addTest(new procedureTest("test1_100"));
-		suite.addTest(new procedureTest("test1_101"));
+//		suite.addTest(new procedureTest("test1_101"));
 //		suite.addTest(new procedureTest("test1_102"));
 //		suite.addTest(new procedureTest("test1_103"));	
 //		suite.addTest(new procedureTest("test1_104"));	

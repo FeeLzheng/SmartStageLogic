@@ -22,9 +22,9 @@ public class ProcedureBaseTestCase extends TestCase {
 	 static SimpleDateFormat SIMPLE_DATE_FORMAT = new SimpleDateFormat(DATE_FORMAT_SIMPLE);
 	 static SimpleDateFormat COMPLICATED_DATE_FORMAT = new SimpleDateFormat(DATE_FORMAT_COMPLICATED);
 	 
-	 static final String yesterdayStr="2017-03-01";
-	 static final String dayStr="2017-03-04";
-	 static final String nextdayStr="2017-03-05";
+	 static final String yesterdayStr="2017-06-09";
+	 static final String dayStr="2017-06-10";
+	 static final String nextdayStr="2017-06-11";
 	 
 	 
 	 static final String A1Str="09:00:00";
@@ -580,17 +580,17 @@ public class ProcedureBaseTestCase extends TestCase {
 				}
 			if(No==1){
 				if(e1_1!=null||f1_1!=null){
-					dao.ProcedureCreate(e1_1, f1_1, procedureid1);
+					dao.ProcedureCreate(e1_1, f1_1, procedureid1,employeeId,2);
 					}
 			}
 				if(No==2){
 					if(e1_2!=null||f1_2!=null){
-						dao.ProcedureCreate(e1_2, f1_2, procedureid2);
+						dao.ProcedureCreate(e1_2, f1_2, procedureid2,employeeId,2);
 						}
 				}
 				if(No==3){
 					if(e1_3!=null||f1_3!=null){
-						dao.ProcedureCreate(e1_3, f1_3, procedureid3);
+						dao.ProcedureCreate(e1_3, f1_3, procedureid3,employeeId,2);
 						}
 				
 			}

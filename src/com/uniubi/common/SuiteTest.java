@@ -10,8 +10,12 @@ import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import junit.textui.TestRunner;
 
+import net.sourceforge.groboutils.junit.v1.MultiThreadedTestRunner;
+import net.sourceforge.groboutils.junit.v1.TestRunnable;
+
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
+import org.junit.Test;  
 
 //@RunWith(Suite.class)
 //@Suite.SuiteClasses({
@@ -21,55 +25,111 @@ import org.junit.runners.Suite;
 
 public class SuiteTest extends TestCase{
 
-	public static void main(String[] args){
+	public static void main(String arg[]) throws Throwable{
 //		ServiceJdbcDataSource.getInstance();
 //		ServiceJdbcDataSource_procedure.getInstance();
 //		ServiceJdbcDataSource_attendance.getInstance();
+		
+		 
 		AttendancelogicMQProducerUtil.init();
 		System.out.println("MQ PRODUCER started");
-		
-		
-		TestRunner.run(Test());//字符界面
+		TestRunner.run(Test());
 	}
-	
+//	 @Test  
+//    public static void testThreadJunit() throws Throwable {   
+//        //Runner数组，想当于并发多少个。 
+//
+//        TestRunnable[] trs = new TestRunnable [2];  
+//            trs[0]=new ThreadA();  
+//            trs[1]=new ThreadB();  
+//         
+//
+//        // 用于执行多线程测试用例的Runner，将前面定义的单个Runner组成的数组传入 
+//        MultiThreadedTestRunner mttr = new MultiThreadedTestRunner(trs);  
+//        // 开发并发执行数组里定义的内容 
+//        mttr.runTestRunnables();  
+//    }  
+//	
+//	
+//	
+//	
+//	 static class ThreadA extends TestRunnable {  
+//	        @Override  
+//	        public void runTest() throws Throwable {  
+//	            // 测试内容
+//	        	Test1();  
+//	        }  
+//	    }  
+//	 static class ThreadB extends TestRunnable {  
+//	        @Override  
+//	        public void runTest() throws Throwable {  
+//	            // 测试内容
+//	        	Test2();  
+//	        }  
+//	    }
+//	
+//	  
+//	  public static TestSuite Test1(){
+//		  TestSuite suite = new TestSuite();
+//		  suite.addTest(new attendanceTest("test1_1"));	
+//		  return suite;
+//		  
+//	  }
+//	
+//	  public static TestSuite Test2(){
+//		  TestSuite suite = new TestSuite();
+//		  suite.addTest(new attendanceTest("test1_2"));	
+//		  return suite;
+//	  }
+//	  
+	  
+//	  public static void myCommMethod2() throws Exception {  
+//	        System.out.println("线程===" + Thread.currentThread().getId() + "执行myCommMethod2操作开始");  
+//	        for (int i = 0; i <10; i++) {  
+//	             int a  = i*5;  
+//	             System.out.println(a);  
+//	        }  
+//	        System.out.println("线程===" + Thread.currentThread().getId() + "执行myCommMethod2操作结束");  
+//	    }  
+//	
 	public static TestSuite Test(){
 		
 		TestSuite suite = new TestSuite();
-//		suite.addTestSuite(attendanceTest.class);
+		suite.addTestSuite(attendanceTest.class);
+//	
+		suite.addTestSuite(com.uniubi.common.procedure.procedureTest.class);
+		suite.addTestSuite(com.uniubi.common.weekend.attendanceTest.class);
+		suite.addTestSuite(com.uniubi.common.procedure.weekend.procedureTest.class);
 ////	
-//		suite.addTestSuite(com.uniubi.common.procedure.procedureTest.class);
-//		suite.addTestSuite(com.uniubi.common.weekend.attendanceTest.class);
-//		suite.addTestSuite(com.uniubi.common.procedure.weekend.procedureTest.class);
-//////	
-//		suite.addTestSuite(com.uniubi.common.outwork.outworkTest.class);
-//		suite.addTestSuite(com.uniubi.common.outwork.weekend.outworkTest.class);
-//		suite.addTestSuite(com.uniubi.common.repair.repairTest.class);
-//		suite.addTestSuite(com.uniubi.common.repair.weekend.repairTest.class);					
-////////		//old logic
-//		suite.addTestSuite(com.uniubi.test.old.AttendanceLogicCommonROTest1.class);
-//		suite.addTestSuite(com.uniubi.test.old.AttendanceLogicCommonROTestWeekend1.class);
-//		suite.addTestSuite(com.uniubi.test.old.AttendanceLogicCommonTest1.class);
-//		suite.addTestSuite(com.uniubi.test.old.AttendanceLogicCommonTest2.class);
-//		suite.addTestSuite(com.uniubi.test.old.AttendanceLogicCommonTestWeekend1.class);
-//		suite.addTestSuite(com.uniubi.test.old.AttendanceLogicCommonTestWeekend2.class);
-//		suite.addTestSuite(com.uniubi.test.old.AttendanceLogicFlexibleROTest1.class);
-//		suite.addTestSuite(com.uniubi.test.old.AttendanceLogicFlexibleROTestWeekend1.class);
-//		suite.addTestSuite(com.uniubi.test.old.AttendanceLogicFlexibleTest1.class);
-//		suite.addTestSuite(com.uniubi.test.old.AttendanceLogicFlexibleTest2.class);
-//		suite.addTestSuite(com.uniubi.test.old.AttendanceLogicFlexibleTestWeekend1.class);
-//		suite.addTestSuite(com.uniubi.test.old.AttendanceLogicFlexibleTestWeekend2.class);
+		suite.addTestSuite(com.uniubi.common.outwork.outworkTest.class);
+		suite.addTestSuite(com.uniubi.common.outwork.weekend.outworkTest.class);
+		suite.addTestSuite(com.uniubi.common.repair.repairTest.class);
+		suite.addTestSuite(com.uniubi.common.repair.weekend.repairTest.class);					
+//////		//old logic
+		suite.addTestSuite(com.uniubi.test.old.AttendanceLogicCommonROTest1.class);
+		suite.addTestSuite(com.uniubi.test.old.AttendanceLogicCommonROTestWeekend1.class);
+		suite.addTestSuite(com.uniubi.test.old.AttendanceLogicCommonTest1.class);
+		suite.addTestSuite(com.uniubi.test.old.AttendanceLogicCommonTest2.class);
+		suite.addTestSuite(com.uniubi.test.old.AttendanceLogicCommonTestWeekend1.class);
+		suite.addTestSuite(com.uniubi.test.old.AttendanceLogicCommonTestWeekend2.class);
+		suite.addTestSuite(com.uniubi.test.old.AttendanceLogicFlexibleROTest1.class);
+		suite.addTestSuite(com.uniubi.test.old.AttendanceLogicFlexibleROTestWeekend1.class);
+		suite.addTestSuite(com.uniubi.test.old.AttendanceLogicFlexibleTest1.class);
+		suite.addTestSuite(com.uniubi.test.old.AttendanceLogicFlexibleTest2.class);
+		suite.addTestSuite(com.uniubi.test.old.AttendanceLogicFlexibleTestWeekend1.class);
+		suite.addTestSuite(com.uniubi.test.old.AttendanceLogicFlexibleTestWeekend2.class);
 		
 		
 		
 		
 		
 ////		suite.addTest(new JUnit4TestAdapter(attendanceTest.class));
-//		suite.addTest(new attendanceTest("test1_1"));	
-//		suite.addTest(new attendanceTest("test1_2"));	
-//		suite.addTest(new attendanceTest("test1_3"));	
-//		suite.addTest(new attendanceTest("test1_4"));	
-//		suite.addTest(new attendanceTest("test1_5"));
-//		suite.addTest(new attendanceTest("test1_6"));
+		suite.addTest(new attendanceTest("test1_1"));	
+		suite.addTest(new attendanceTest("test1_2"));	
+		suite.addTest(new attendanceTest("test1_3"));	
+		suite.addTest(new attendanceTest("test1_4"));	
+		suite.addTest(new attendanceTest("test1_5"));
+		suite.addTest(new attendanceTest("test1_6"));
 //		suite.addTest(new attendanceTest("test1_7"));
 //		suite.addTest(new attendanceTest("test1_8"));	
 //		suite.addTest(new attendanceTest("test1_9"));	
@@ -174,7 +234,7 @@ public class SuiteTest extends TestCase{
 //		suite.addTest(new attendanceTest("test1_108"));
 //		suite.addTest(new attendanceTest("test1_109"));
 //		suite.addTest(new attendanceTest("test1_110"));
-//		suite.addTest(new attendanceTest("test1_111"));
+		suite.addTest(new attendanceTest("test1_111"));
 //		suite.addTest(new attendanceTest("test1_112"));
 //		suite.addTest(new attendanceTest("test1_113"));	
 //		suite.addTest(new attendanceTest("test1_114"));	
@@ -243,7 +303,7 @@ public class SuiteTest extends TestCase{
 		
 		
 		//测试打卡
-		suite.addTest(new attendanceTest("test1_177"));
+//		suite.addTest(new attendanceTest("test1_177"));
 //		
 		return suite;
 		

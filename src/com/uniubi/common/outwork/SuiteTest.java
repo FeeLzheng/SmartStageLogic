@@ -41,10 +41,10 @@ public class SuiteTest extends TestCase{
 //		suite.addTestSuite(procedureTest.class);
 ////		suite.addTest(new JUnit4TestAdapter(attendanceTest.class));
 		suite.addTest(new outworkTest("test1_1"));	
-//		suite.addTest(new outworkTest("test1_2"));	
-//		suite.addTest(new outworkTest("test1_3"));	
-//		suite.addTest(new outworkTest("test1_4"));	
-//		suite.addTest(new outworkTest("test1_5"));
+		suite.addTest(new outworkTest("test1_2"));	
+		suite.addTest(new outworkTest("test1_3"));	
+		suite.addTest(new outworkTest("test1_4"));	
+		suite.addTest(new outworkTest("test1_5"));
 //		suite.addTest(new outworkTest("test1_6"));
 //		suite.addTest(new outworkTest("test1_7"));
 //		suite.addTest(new outworkTest("test1_8"));	

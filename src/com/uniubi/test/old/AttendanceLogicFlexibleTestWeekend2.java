@@ -53,7 +53,8 @@ import com.uniubi.flexible.oldlogic.weekend.AttendanceLogicFlexibleTest2AssertBa
  * 2016-05-28
  */
 public class AttendanceLogicFlexibleTestWeekend2 extends OldBaseTestCaseWeekend{
-
+	private static byte type1=2;//流程类别。1-病假;2-事假;3-产假;4-年假;8-特殊假;5-补签;6-出差;7-其他;
+	private static byte type2=3;//流程类别。1-病假;2-事假;3-产假;4-年假;8-特殊假;5-补签;6-出差;7-其他;
 	private static Date DL1 = null;
 	private static Date DL2 = null;
 	private static long t;
@@ -791,7 +792,7 @@ public class AttendanceLogicFlexibleTestWeekend2 extends OldBaseTestCaseWeekend{
 	
 		
 		//更新流程请假时间（跨天）
-		dao.ProcedureCreate(e1,f1,procedureId1);
+		dao.ProcedureCreate(e1,f1,procedureId1,employeeId,type1);
 		attendancesCreate2(1);
 
 		//校验第一天,工时、迟到时间、早退时间、请假时间
@@ -819,7 +820,7 @@ public class AttendanceLogicFlexibleTestWeekend2 extends OldBaseTestCaseWeekend{
 		}
 		if(e2 != null && f2 != null){
 			//更新第二个流程请假时间
-			dao.ProcedureCreate(e2,f2,procedureId2);
+			dao.ProcedureCreate(e2,f2,procedureId2,employeeId,type2);
 			
 
 			
@@ -849,7 +850,7 @@ public class AttendanceLogicFlexibleTestWeekend2 extends OldBaseTestCaseWeekend{
 	
 		
 		//更新流程请假时间（跨天）
-		dao.ProcedureCreate(e1,f1,procedureId1);
+		dao.ProcedureCreate(e1,f1,procedureId1,employeeId,type1);
 		
 	
 		
@@ -883,7 +884,7 @@ public class AttendanceLogicFlexibleTestWeekend2 extends OldBaseTestCaseWeekend{
 		}
 		if(e2 != null && f2 != null){
 			//更新第二个流程请假时间
-			dao.ProcedureCreate(e2,f2,procedureId2);
+			dao.ProcedureCreate(e2,f2,procedureId2,employeeId,type2);
 			
 	
 			
@@ -919,7 +920,7 @@ public class AttendanceLogicFlexibleTestWeekend2 extends OldBaseTestCaseWeekend{
 
 		
 		//更新流程请假时间（跨天）
-		dao.ProcedureCreate(e1,f1,procedureId1);
+		dao.ProcedureCreate(e1,f1,procedureId1,employeeId,type1);
 		
 
 		
@@ -938,7 +939,7 @@ public class AttendanceLogicFlexibleTestWeekend2 extends OldBaseTestCaseWeekend{
 		}
 		if(e2 != null && f2 != null){
 			//更新第二个流程请假时间
-			dao.ProcedureCreate(e2,f2,procedureId2);
+			dao.ProcedureCreate(e2,f2,procedureId2,employeeId,type2);
 			
 	
 			

@@ -300,10 +300,10 @@ public class SuiteTest extends TestCase{
 //		suite.addTest(new AttendanceLogicFlexibleTest2("test1_11"));
 //		suite.addTest(new AttendanceLogicFlexibleTest2("test1_12"));
 //		suite.addTest(new AttendanceLogicFlexibleTest2("test1_13"));
-		suite.addTest(new AttendanceLogicFlexibleTest2("test1_14"));
+//		suite.addTest(new AttendanceLogicFlexibleTest2("test1_14"));
 //		suite.addTest(new AttendanceLogicFlexibleTest2("test1_15"));	
 //		suite.addTest(new AttendanceLogicFlexibleTest2("test2_1"));
-		suite.addTest(new AttendanceLogicFlexibleTest2("test2_2"));
+//		suite.addTest(new AttendanceLogicFlexibleTest2("test2_2"));
 //		suite.addTest(new AttendanceLogicFlexibleTest2("test2_3"));
 //		suite.addTest(new AttendanceLogicFlexibleTest2("test2_4"));
 //		suite.addTest(new AttendanceLogicFlexibleTest2("test2_5"));

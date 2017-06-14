@@ -26,9 +26,9 @@ public class BaseTestCase extends TestCase {
 	 static SimpleDateFormat SIMPLE_DATE_FORMAT = new SimpleDateFormat(DATE_FORMAT_SIMPLE);
 	 static SimpleDateFormat COMPLICATED_DATE_FORMAT = new SimpleDateFormat(DATE_FORMAT_COMPLICATED);
 	 
-	 static final String yesterdayStr="2017-03-01";
-	 static final String dayStr="2017-03-02";
-	 static final String nextdayStr="2017-03-03";
+	 static final String yesterdayStr="2017-06-07";
+	 static final String dayStr="2017-06-08";
+	 static final String nextdayStr="2017-06-09";
 	 static final String moreday="2017-03-12";
 	 
 	 
@@ -372,6 +372,54 @@ public class BaseTestCase extends TestCase {
 				
 				dao.AttendanceCreate(userId, employeeId, t2_5, t2_6);
 				dao.AttendanceCreate(userId, employeeId2, t2_5, t2_6);
+			
+				
+		}
+		
+	
+			
+		}
+	
+	
+	
+	
+	public void attendanceCreate_special(int No){
+		int employeeId_special=100000007;
+		if(No==1){
+				dao.AttendanceCreate(userId, employeeId_special, t1_1, t1_2);
+//				dao.AttendanceCreate(userId, employeeId, t1_1, t1_2);
+			
+		}
+		
+		if(No==2){
+				dao.AttendanceCreate(userId, employeeId_special, t1_3, t1_4);
+//				dao.AttendanceCreate(userId, employeeId2, t1_3, t1_4);
+			
+			
+		}
+		if(No==3){
+			
+			dao.AttendanceCreate(userId, employeeId_special, t1_5, t1_6);
+//			dao.AttendanceCreate(userId, employeeId2, t1_5, t1_6);
+		}
+		if(No==4){
+			
+				dao.AttendanceCreate(userId, employeeId_special, t2_1, t2_2);
+//				dao.AttendanceCreate(userId, employeeId2, t2_1, t2_2);
+			
+		}
+		if(No==5){
+			
+				dao.AttendanceCreate(userId, employeeId_special, t2_3, t2_4);
+//				dao.AttendanceCreate(userId, employeeId2, t2_3, t2_4);
+				
+			
+		}
+		if(No==6){
+			
+				
+				dao.AttendanceCreate(userId, employeeId, t2_5, t2_6);
+//				dao.AttendanceCreate(userId, employeeId2, t2_5, t2_6);
 			
 				
 		}

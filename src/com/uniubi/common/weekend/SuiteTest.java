@@ -40,7 +40,7 @@ public class SuiteTest extends TestCase{
 //		suite.addTest(new attendanceTest("test1_1"));	
 //		suite.addTest(new attendanceTest("test1_2"));	
 //		suite.addTest(new attendanceTest("test1_3"));	
-////		suite.addTest(new attendanceTest("test1_4"));	
+//		suite.addTest(new attendanceTest("test1_4"));	
 //		suite.addTest(new attendanceTest("test1_5"));
 //		suite.addTest(new attendanceTest("test1_6"));
 //		suite.addTest(new attendanceTest("test1_7"));

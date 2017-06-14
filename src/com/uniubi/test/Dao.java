@@ -20,10 +20,10 @@ import com.uniubi.util.AttendancelogicMQProducerUtil;
 
 public class Dao{
 	
-	String date1="2017-03-02";
-	String date2="2017-03-03";
-	String date3="2017-03-04";
-	String date4="2017-03-05";
+	String date1="2017-06-08";
+	String date2="2017-06-09";
+	String date3="2017-06-03";
+	String date4="2017-06-04";
 	static String DATE_FORMAT_SIMPLE = "yyyy-MM-dd";
 	 static SimpleDateFormat SIMPLE_DATE_FORMAT = new SimpleDateFormat(DATE_FORMAT_SIMPLE);
 	 
@@ -479,15 +479,34 @@ public class Dao{
 		
 	}
 		
-		public void ProcedureCreate(Date e1, Date f1,int procedureid) {
+		public void ProcedureCreate(Date e1, Date f1,int procedureid,int employeeid,int type) {
 			Connection conn=null;
 			PreparedStatement ps=null;
-//			ResultSet rs=null;
+			ResultSet rs=null;
 			
 //			ServiceJdbcDataSource_procedure db =new ServiceJdbcDataSource_procedure();
 			conn=ServiceJdbcDataSource_procedure.getInstance().getConnection();
 			
 			try {
+				
+					String sql0="select * from uniubi_procedure193 where ID="+procedureid;
+					ps=conn.prepareStatement(sql0);
+					rs=ps.executeQuery();
+				    
+				
+					if(rs.next()){
+						String sql2="update uniubi_procedure193 set EMPLOYEE_ID=?,type= "+type+ " where ID="+procedureid;
+						ps=conn.prepareStatement(sql2);
+						ps.setInt(1,employeeid);
+						ps.executeUpdate();
+					}else{
+						String sql1="insert into uniubi_procedure193(ID,USER_ID,EMPLOYEE_ID,APPROVER_ID,TYPE,STATE,CREATE_TIME,DEAL_TIME,START_TIME,END_TIME,REPAIR_TIME)values("+procedureid+",52,"+employeeid+",100000001,"+type+",2,'2016-08-19 20:32:00','2017-03-31 20:17:38','2017-03-31 20:17:38','2017-03-31 20:17:38','2017-03-31 20:17:38')";
+						ps=conn.prepareStatement(sql1);
+						ps.executeUpdate();
+					}
+						
+				
+				
 				String sql="update uniubi_procedure193 set START_TIME=?,END_TIME=?,STATE=2 where ID="+procedureid;
 				if(e1!=null){
 				ps=conn.prepareStatement(sql);
@@ -501,7 +520,7 @@ public class Dao{
 				AttendancelogicMQProducerUtil.sendProcedureMessage(getProcedure(procedureid));//发送procedure 对象
 				
 				System.out.println("发送给服务器的请假类型：" +getProcedure(procedureid).getType());
-				System.out.println("发送给服务器的请假时间  开始时间：" +getProcedure(procedureid).getStartTime()+ "结束时间：" +getProcedure(procedureid).getEndTime());
+				System.out.println( "员工ID： "  +employeeid+" 发送给服务器的请假时间  开始时间：" +getProcedure(procedureid).getStartTime()+ "结束时间：" +getProcedure(procedureid).getEndTime());
 //				Thread.sleep(1000);
 				}	
 			}catch(Exception e){
@@ -522,15 +541,33 @@ public class Dao{
 			
 		}
 		
-		public void OutworkCreate(Date e1, Date f1,int procedureid) {
+		public void OutworkCreate(Date e1, Date f1,int procedureid,int employeeid,int type) {
 			Connection conn=null;
 			PreparedStatement ps=null;
-//			ResultSet rs=null;
+			ResultSet rs=null;
 			
 //			ServiceJdbcDataSource_procedure db =new ServiceJdbcDataSource_procedure();
 			conn=ServiceJdbcDataSource_procedure.getInstance().getConnection();
 			
 			try {
+				
+				
+				String sql0="select * from uniubi_procedure193 where ID="+procedureid;
+				ps=conn.prepareStatement(sql0);
+				rs=ps.executeQuery();
+				if(rs.next()){
+					String sql2="update uniubi_procedure193 set EMPLOYEE_ID=? where ID="+procedureid;
+					ps=conn.prepareStatement(sql2);
+					ps.setInt(1,employeeid);
+					
+					
+					ps.executeUpdate();
+				}else{
+					String sql1="insert into uniubi_procedure193(ID,USER_ID,EMPLOYEE_ID,APPROVER_ID,TYPE,STATE,CREATE_TIME,DEAL_TIME,START_TIME,END_TIME,REPAIR_TIME)values("+procedureid+",52,"+employeeid+",100000001,"+type+",2,'2016-08-19 20:32:00','2017-03-31 20:17:38','2017-03-31 20:17:38','2017-03-31 20:17:38','2017-03-31 20:17:38')";
+					ps=conn.prepareStatement(sql1);
+					ps.executeUpdate();
+				}
+					
 				String sql="update uniubi_procedure193 set START_TIME=?,END_TIME=?,STATE=2 where ID="+procedureid;
 				if(e1!=null){
 				ps=conn.prepareStatement(sql);
@@ -566,26 +603,45 @@ public class Dao{
 		}
 		
 		
-		public void RepairCreateNoattendance(Date r1,int procedureid) {
+		public void RepairCreateNoattendance(Date r1,int procedureid,int employeeId) {
 			Connection conn=null;
 			PreparedStatement ps=null;
-//			ResultSet rs=null;
+			ResultSet rs=null;
 			
 //			ServiceJdbcDataSource_procedure db =new ServiceJdbcDataSource_procedure();
 			conn=ServiceJdbcDataSource_procedure.getInstance().getConnection();
 			
 			try {
-				String sql="update uniubi_procedure193 set REPAIR_TIME=?,STATE=2 where ID="+procedureid;
 				
-				if(r1!=null){
-				ps=conn.prepareStatement(sql);
-				ps.setTimestamp(1, new Timestamp(r1.getTime()));
-				
-				
-				ps.executeUpdate();
-				
-				
+				String sql0="select * from uniubi_procedure193 where ID="+procedureid;
+				ps=conn.prepareStatement(sql0);
+				rs=ps.executeQuery();
+				if(rs.next()){
+					String sql2="update uniubi_procedure193 set EMPLOYEE_ID=? ,REPAIR_TIME=? ,type=5 where ID="+procedureid;
+					ps=conn.prepareStatement(sql2);
+					
+					ps.setInt(1,employeeId);
+					ps.setTimestamp(2, new Timestamp(r1.getTime()));
+					ps.executeUpdate();
+				}else{
+					String sql1="insert into uniubi_procedure193(ID,USER_ID,EMPLOYEE_ID,APPROVER_ID,TYPE,STATE,CREATE_TIME,DEAL_TIME,START_TIME,END_TIME,REPAIR_TIME)values("+procedureid+",52,"+employeeId+",100000001,"+5+",2,'2016-08-19 20:32:00','2017-03-31 20:17:38','2017-03-31 20:17:38','2017-03-31 20:17:38',?)";
+//					String sql1="insert into uniubi_procedure193(ID,USER_ID,EMPLOYEE_ID,APPROVER_ID,TYPE,STATE,CREATE_TIME,DEAL_TIME,START_TIME,END_TIME,REPAIR_TIME)values("+procedureid+",52,"+employeeId+",100000001,"+type+",2,'2016-08-19 20:32:00','2017-03-31 20:17:38','2017-03-31 20:17:38','2017-03-31 20:17:38','2017-03-31 20:17:38')";
+					ps=conn.prepareStatement(sql1);
+					ps.setTimestamp(1, new Timestamp(r1.getTime()));
+					ps.executeUpdate();
 				}
+				
+				
+				
+//				if(r1!=null){
+//				ps=conn.prepareStatement(sql1);
+//				ps.setTimestamp(1, new Timestamp(r1.getTime()));
+//				
+//				
+//				ps.executeUpdate();
+//				
+//				
+//				}
 				
 				
 			}catch(Exception e){
@@ -606,8 +662,9 @@ public class Dao{
 			
 		}
 		
-		public void RepairCreate(Date r1,int procedureid) {
-			RepairCreateNoattendance(r1,procedureid);
+		public void RepairCreate(Date r1,int procedureid,int employeeId) {
+			if(r1!=null){
+			RepairCreateNoattendance(r1,procedureid,employeeId);
 			Connection conn=null;
 			PreparedStatement ps=null;		
 			
@@ -615,7 +672,7 @@ public class Dao{
 				conn=ServiceJdbcDataSource_attendance.getInstance().getConnection();
 				String sql ="insert into UNIUBI_ATTENDANCE40000(USER_ID,EMPLOYEE_ID,SHOW_TIME) values( "+getProcedure(procedureid).getUserid()+","+getProcedure(procedureid).getEmployeeid()+",?)";
 				if(r1!=null){
-				ps=conn.prepareStatement(sql);
+					ps=conn.prepareStatement(sql);
 				
 				ps.setTimestamp(1,new Timestamp(r1.getTime()));
 				ps.executeUpdate();
@@ -630,7 +687,7 @@ public class Dao{
 				ServiceJdbcDataSource_attendance.psclose(ps);
 				ServiceJdbcDataSource_attendance.connclose(conn);
 			}
-			
+			}
 			
 		}
 		
@@ -778,6 +835,7 @@ public class Dao{
 				 employeeDay.setFirstTime(rs.getTimestamp("FIRST_TIME"));
 				 employeeDay.setLastTime(rs.getTimestamp("LAST_TIME"));
 				 employeeDay.setType(rs.getInt("Type"));
+				 employeeDay.setdaytype(rs.getInt("DAY_TYPE"));//0默认，是以前的数据，1：工作，2：休息。
 //				 employeeDay.setAllLeaveDur(rs.getInt("LEAVE_DUR"));			
 			}
 			

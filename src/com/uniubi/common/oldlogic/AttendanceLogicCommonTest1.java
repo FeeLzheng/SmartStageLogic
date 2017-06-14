@@ -391,7 +391,7 @@ public class AttendanceLogicCommonTest1 extends OldBaseTestCase{
 		
 		
 		//更新流程
-		dao.ProcedureCreate(e1,f1,procedureId1);
+		dao.ProcedureCreate(e1,f1,procedureId1,employeeId,2);
 		
 		attendancesCreate(1);
 		
@@ -404,7 +404,7 @@ public class AttendanceLogicCommonTest1 extends OldBaseTestCase{
 		AttendanceLogicCommonTest1AssertBase.getInstance( A1, B1, t1_1, t1_n, e1, f1, e2, f2,employeeDay2,caseNo).Testx_x(1);
 		if(e2 != null && f2 != null){
 			//更新第二个流程
-			dao.ProcedureCreate(e2,f2,procedureId2);
+			dao.ProcedureCreate(e2,f2,procedureId2,employeeId,3);
 			
 
 			
@@ -427,7 +427,7 @@ public class AttendanceLogicCommonTest1 extends OldBaseTestCase{
 	
 		
 		//更新流程
-		dao.ProcedureCreate(e1,f1,procedureId1);
+		dao.ProcedureCreate(e1,f1,procedureId1,employeeId,2);
 		
 
 		
@@ -439,7 +439,7 @@ public class AttendanceLogicCommonTest1 extends OldBaseTestCase{
 		AttendanceLogicCommonTest1AssertBase.getInstance( A1, B1, t1_1, t1_n, e1, f1, e2, f2,employeeDay2,caseNo).Testx_x(1);
 		if(e2 != null && f2 != null){
 			//更新第二个流程
-			dao.ProcedureCreate(e2,f2,procedureId2);
+			dao.ProcedureCreate(e2,f2,procedureId2,employeeId,3);
 			
 
 			employeeDay = dao.getEmployeeDay(userId,employeeId,day,1); 

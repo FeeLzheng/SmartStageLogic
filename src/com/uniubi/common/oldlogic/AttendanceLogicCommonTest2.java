@@ -698,7 +698,7 @@ public class AttendanceLogicCommonTest2 extends OldBaseTestCase{
 	
 		
 		//更新流程请假时间（跨天）
-		dao.ProcedureCreate(e1,f1,procedureId1);
+		dao.ProcedureCreate(e1,f1,procedureId1,employeeId,2);
 		
 		attendancesCreate(1);
 		
@@ -723,7 +723,7 @@ public class AttendanceLogicCommonTest2 extends OldBaseTestCase{
 		
 		if(e2 != null && f2 != null){
 			//更新第二个流程请假时间
-			dao.ProcedureCreate(e2,f2,procedureId2);
+			dao.ProcedureCreate(e2,f2,procedureId2,employeeId,3);
 			
 
 			employeeDay = dao.getEmployeeDay(userId,employeeId,day,1); 
@@ -745,7 +745,7 @@ public class AttendanceLogicCommonTest2 extends OldBaseTestCase{
 
 		
 		//更新流程请假时间（跨天）
-		dao.ProcedureCreate(e1,f1,procedureId1);
+		dao.ProcedureCreate(e1,f1,procedureId1,employeeId,2);
 
 		
 		employeeDay = dao.getEmployeeDay(userId,employeeId,day,1); 
@@ -767,7 +767,7 @@ public class AttendanceLogicCommonTest2 extends OldBaseTestCase{
 		
 		if(e2 != null && f2 != null){
 			//更新第二个流程请假时间
-			dao.ProcedureCreate(e2,f2,procedureId2);
+			dao.ProcedureCreate(e2,f2,procedureId2,employeeId,3);
 			
 
 			employeeDay = dao.getEmployeeDay(userId,employeeId,day,1); 
@@ -793,7 +793,7 @@ public class AttendanceLogicCommonTest2 extends OldBaseTestCase{
 
 		
 		//更新流程请假时间（跨天）
-		dao.ProcedureCreate(e1,f1,procedureId1);
+		dao.ProcedureCreate(e1,f1,procedureId1,employeeId,2);
 		
 
 		
@@ -806,7 +806,7 @@ public class AttendanceLogicCommonTest2 extends OldBaseTestCase{
 		AttendanceLogicCommonTest2AssertBase.getInstance( A1, B1, A2, B2, t1_1, t1_n, t2_1, t2_n, e1, f1, e2, f2,employeeDay2,employeeNextDay2,caseNo).Testx_x_3_1();
 		if(e2 != null && f2 != null){
 			//更新第二个流程请假时间
-			dao.ProcedureCreate(e2,f2,procedureId2);
+			dao.ProcedureCreate(e2,f2,procedureId2,employeeId,3);
 			
 
 			

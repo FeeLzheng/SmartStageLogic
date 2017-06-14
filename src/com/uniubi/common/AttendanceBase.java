@@ -1,5 +1,7 @@
 package com.uniubi.common;
 
+import static org.junit.Assert.assertEquals;
+
 import java.util.Date;
 
 import com.uniubi.test.EmployeeDay;
@@ -81,15 +83,19 @@ public class AttendanceBase{
 	
 	public void test1(){
 //		System.out.println("对比总表的数据");
+		
 	}
 	public void test2(){
 //		System.out.println("对比分表1中的数据");		
+		
 	}
 	public void test3(){
-//		System.out.println("对比分表2中的数据");		
+//		System.out.println("对比分表2中的数据");	
+		
 	}
 	public void test4(){
 //		System.out.println("对比分表3中的数据");		
+		assertEquals(employeeday4.getdaytype(),1);
 	}
 	
 	
@@ -99,17 +105,25 @@ public class AttendanceBase{
 		if(No==1){
 			System.out.println("对比总表的数据");
 			test1();
+			System.out.println("今天是工作日");
+			assertEquals(employeeday1.getdaytype(),1);
 				} 
 		if(No==2){
 			System.out.println("对比分表1中的数据");	
-			test2();}
+			test2();
+			System.out.println("今天是工作日");
+			assertEquals(employeeday2.getdaytype(),1);}
 		if(No==3){
 			System.out.println("对比分表2中的数据");	
-			test3();			
+			test3();
+			System.out.println("今天是工作日");
+			assertEquals(employeeday3.getdaytype(),1);
 		}
 		if(No==4){
 			System.out.println("对比分表3中的数据");	
 			test4();
+			System.out.println("今天是工作日");
+			assertEquals(employeeday4.getdaytype(),1);
 		}
 		
 		

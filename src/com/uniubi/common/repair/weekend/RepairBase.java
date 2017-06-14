@@ -126,10 +126,10 @@ public class RepairBase{
 		System.out.println("对比分表1中的数据");		
 	}
 	public void test3(){
-		System.out.println("对比分表2中的数据");		
+		System.out.println("对比分表2中的数据");	
 	}
 	public void test4(){
-		System.out.println("对比分表3中的数据");		
+		System.out.println("对比分表3中的数据");
 	}
 	
 	public void test1_1(){
@@ -139,10 +139,10 @@ public class RepairBase{
 		System.out.println("对比只有请假数据无打卡的分表1");		
 	}
 	public void test3_1(){
-		System.out.println("对比只有请假数据无打卡的分表2");		
+		System.out.println("对比只有请假数据无打卡的分表2");	
 	}
 	public void test4_1(){
-		System.out.println("对比只有请假数据无打卡的分表3");		
+		System.out.println("对比只有请假数据无打卡的分表3");	
 	}
 	
 	
@@ -152,21 +152,30 @@ public class RepairBase{
 		if(No==1){
 			System.out.println("对比总表的数据");
 			test1();
+			System.out.println("今天是休息日");
+			assertEquals(employeeday1.getdaytype(),2);
 			test1_employeeweekend();
 				} 
 		if(No==2){
 			System.out.println("对比分表1中的数据");	
+			System.out.println("今天是休息日");
+			assertEquals(employeeday1.getdaytype(),2);
 			test2();
-		}
 			test2_employeeweekend();
+		}
+			
 		if(No==3){
 			System.out.println("对比分表2中的数据");	
 			test3();
+			System.out.println("今天是休息日");
+			assertEquals(employeeday1.getdaytype(),2);
 			test3_employeeweekend();
 		}
 		if(No==4){
 			System.out.println("对比分表3中的数据");	
 			test4();
+			System.out.println("今天是休息日");
+			assertEquals(employeeday1.getdaytype(),2);
 			test4_employeeweekend();
 		}
 		

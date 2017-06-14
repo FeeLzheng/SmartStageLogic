@@ -52,6 +52,9 @@ import com.uniubi.common.oldlogic.AttendanceLogicCommonTest2AssertBase;
  */
 public class AttendanceLogicCommonTest2 extends OldBaseTestCase{
 
+	private static byte type1=3;//流程类别。1-病假;2-事假;3-产假;4-年假;8-特殊假;5-补签;6-出差;7-其他;
+	private static byte type2=4;//流程类别。1-病假;2-事假;3-产假;4-年假;8-特殊假;5-补签;6-出差;7-其他;
+	
 	public AttendanceLogicCommonTest2(String name){
 		super(name);
 		try {
@@ -701,7 +704,7 @@ public class AttendanceLogicCommonTest2 extends OldBaseTestCase{
 	
 		
 		//更新流程请假时间（跨天）
-		dao.ProcedureCreate(e1,f1,procedureId1);
+		dao.ProcedureCreate(e1,f1,procedureId1,employeeId,type1);
 		
 		attendancesCreate(1);
 		
@@ -729,7 +732,7 @@ public class AttendanceLogicCommonTest2 extends OldBaseTestCase{
 		
 		if(e2 != null && f2 != null){
 			//更新第二个流程请假时间
-			dao.ProcedureCreate(e2,f2,procedureId2);
+			dao.ProcedureCreate(e2,f2,procedureId2,employeeId,type2);
 			
 
 			employeeDay = dao.getEmployeeDay(userId,employeeId,day,1); 
@@ -754,7 +757,7 @@ public class AttendanceLogicCommonTest2 extends OldBaseTestCase{
 
 		
 		//更新流程请假时间（跨天）
-		dao.ProcedureCreate(e1,f1,procedureId1);
+		dao.ProcedureCreate(e1,f1,procedureId1,employeeId,type1);
 
 		
 		employeeDay = dao.getEmployeeDay(userId,employeeId,day,1); 
@@ -781,7 +784,7 @@ public class AttendanceLogicCommonTest2 extends OldBaseTestCase{
 		
 		if(e2 != null && f2 != null){
 			//更新第二个流程请假时间
-			dao.ProcedureCreate(e2,f2,procedureId2);
+			dao.ProcedureCreate(e2,f2,procedureId2,employeeId,type2);
 			
 
 			employeeDay = dao.getEmployeeDay(userId,employeeId,day,1); 
@@ -809,7 +812,7 @@ public class AttendanceLogicCommonTest2 extends OldBaseTestCase{
 
 		
 		//更新流程请假时间（跨天）
-		dao.ProcedureCreate(e1,f1,procedureId1);
+		dao.ProcedureCreate(e1,f1,procedureId1,employeeId,type1);
 		
 
 		
@@ -825,7 +828,7 @@ public class AttendanceLogicCommonTest2 extends OldBaseTestCase{
 		AttendanceLogicCommonTest2AssertBase.getInstance( A1, B1, A2, B2, t1_1, t1_n, t2_1, t2_n, e1, f1, e2, f2,employeeDay,employeeNextDay,caseNo).Testx_x_3_1();
 		if(e2 != null && f2 != null){
 			//更新第二个流程请假时间
-			dao.ProcedureCreate(e2,f2,procedureId2);
+			dao.ProcedureCreate(e2,f2,procedureId2,employeeId,type2);
 			
 
 			

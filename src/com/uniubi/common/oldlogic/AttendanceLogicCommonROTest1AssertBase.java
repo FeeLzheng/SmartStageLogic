@@ -79,6 +79,7 @@ public abstract class AttendanceLogicCommonROTest1AssertBase {
 	public void Testx_x(int code){
 		if(code == 1){
 			Testx_x_1();
+			assertEquals(employeeDay.getdaytype(),1);
 		
 		}else{
 			Testx_x_2();
@@ -95,6 +96,8 @@ public abstract class AttendanceLogicCommonROTest1AssertBase {
 	 */
 	@Test
 	public abstract void Testx_x_1();
+	
+	
 	
 	/***
 	 * 

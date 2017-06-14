@@ -22,9 +22,9 @@ public class OutworkBaseTestCase extends TestCase {
 	 static SimpleDateFormat SIMPLE_DATE_FORMAT = new SimpleDateFormat(DATE_FORMAT_SIMPLE);
 	 static SimpleDateFormat COMPLICATED_DATE_FORMAT = new SimpleDateFormat(DATE_FORMAT_COMPLICATED);
 	 
-	 static final String yesterdayStr="2017-03-01";
-	 static final String dayStr="2017-03-04";
-	 static final String nextdayStr="2017-03-05";
+	 static final String yesterdayStr="2017-06-09";
+	 static final String dayStr="2017-06-10";
+	 static final String nextdayStr="2017-06-11";
 	 
 	 
 	 static final String A1Str="09:00:00";
@@ -492,12 +492,12 @@ public class OutworkBaseTestCase extends TestCase {
 				}
 			if(No==1){
 				if(o1_1!=null||o1_2!=null){
-					dao.OutworkCreate(o1_1, o1_2, procedureid4);
+					dao.OutworkCreate(o1_1, o1_2, procedureid4,employeeId,6);
 					}
 			}
 				if(No==2){
 					if(o1_3!=null||o1_4!=null){
-						dao.OutworkCreate(o1_3, o1_4, procedureid4);
+						dao.OutworkCreate(o1_3, o1_4, procedureid4,employeeId,6);
 						}
 
 			

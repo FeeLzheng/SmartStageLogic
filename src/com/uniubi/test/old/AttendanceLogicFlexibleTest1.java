@@ -36,6 +36,8 @@ import com.uniubi.flexible.oldlogic.AttendanceLogicFlexibleTest1AssertBase;
  */
 public class AttendanceLogicFlexibleTest1 extends OldBaseTestCase{
 
+	private static byte type1=1;//流程类别。1-病假;2-事假;3-产假;4-年假;8-特殊假;5-补签;6-出差;7-其他;
+	private static byte type2=2;//流程类别。1-病假;2-事假;3-产假;4-年假;8-特殊假;5-补签;6-出差;7-其他;
 	private static long t;
 	private static Date DL1;
 	private static String DLStr = "18:00:00";
@@ -792,7 +794,7 @@ public class AttendanceLogicFlexibleTest1 extends OldBaseTestCase{
 		
 		
 		//更新流程
-		dao.ProcedureCreate(e1,f1,procedureId1);
+		dao.ProcedureCreate(e1,f1,procedureId1,employeeId,type1);
 		
 		attendancesCreate(1);
 		//校验第一天,工时、迟到时间、早退时间、请假时间
@@ -806,7 +808,7 @@ public class AttendanceLogicFlexibleTest1 extends OldBaseTestCase{
 		
 		if(e2 != null && f2 != null){
 			//更新第二个流程
-			dao.ProcedureCreate(e2,f2,procedureId2);
+			dao.ProcedureCreate(e2,f2,procedureId2,employeeId,type2);
 							
 			employeeDay = dao.getEmployeeDay(userId,employeeId,day,1); 
 //			System.out.println(JsonUtil.toString(employeeDay));
@@ -828,7 +830,7 @@ public class AttendanceLogicFlexibleTest1 extends OldBaseTestCase{
 	
 		
 		
-		dao.ProcedureCreate(e1,f1,procedureId1);
+		dao.ProcedureCreate(e1,f1,procedureId1,employeeId,type1);
 		
 
 		
@@ -843,7 +845,7 @@ public class AttendanceLogicFlexibleTest1 extends OldBaseTestCase{
 		
 		if(e2 != null && f2 != null){
 			//更新第二个流程
-			dao.ProcedureCreate(e2,f2,procedureId2);
+			dao.ProcedureCreate(e2,f2,procedureId2,employeeId,type2);
 			
 
 			

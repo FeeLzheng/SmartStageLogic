@@ -22,9 +22,9 @@ public class RepairBaseTestCase extends TestCase {
 	 static SimpleDateFormat SIMPLE_DATE_FORMAT = new SimpleDateFormat(DATE_FORMAT_SIMPLE);
 	 static SimpleDateFormat COMPLICATED_DATE_FORMAT = new SimpleDateFormat(DATE_FORMAT_COMPLICATED);
 	 
-	 static final String yesterdayStr="2017-03-01";
-	 static final String dayStr="2017-03-02";
-	 static final String nextdayStr="2017-03-03";
+	 static final String yesterdayStr="2017-06-07";
+	 static final String dayStr="2017-06-08";
+	 static final String nextdayStr="2017-06-09";
 	 
 	 
 	 static final String A1Str="09:00:00";
@@ -432,13 +432,13 @@ public class RepairBaseTestCase extends TestCase {
 			if(No==1){
 				if(r1_1!=null){
 //					Thread.sleep(1000);
-					dao.RepairCreate(r1_1, procedureid5);
+					dao.RepairCreate(r1_1, procedureid5,employeeId);
 					}
 			}
 				if(No==2){
 					if(r1_2!=null){
 //					
-						dao.RepairCreate(r1_2, procedureid6);
+						dao.RepairCreate(r1_2, procedureid6,employeeId);
 						}
 
 			
@@ -446,20 +446,20 @@ public class RepairBaseTestCase extends TestCase {
 		}if(No==3){
 			if(r1_3!=null){
 //			
-				dao.RepairCreate(r1_3, procedureid7);
+				dao.RepairCreate(r1_3, procedureid7,employeeId);
 
 				}
 			}if(No==4){
 				if(r1_4!=null){
 //					
-					dao.RepairCreate(r1_4, procedureid8);
+					dao.RepairCreate(r1_4, procedureid8,employeeId);
 
 					}
 				}
 			if(No==5){
 				if(r1_5!=null){
 
-					dao.RepairCreate(r1_5, procedureid9);
+					dao.RepairCreate(r1_5, procedureid9,employeeId);
 
 
 					}
@@ -467,7 +467,7 @@ public class RepairBaseTestCase extends TestCase {
 			if(No==6){
 				if(r1_6!=null){
 
-					dao.RepairCreate(r1_6, procedureid10);
+					dao.RepairCreate(r1_6, procedureid10,employeeId);
 
 
 					}

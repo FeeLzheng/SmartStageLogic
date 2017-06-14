@@ -2957,13 +2957,13 @@ public class attendanceTest extends BaseTestCase{
 		@Test
 		public void test1_177() throws Exception{
 			
-			
-			t1_1=COMPLICATED_DATE_FORMAT.parse("2017-04-28"+" "+"09:10:00");
-			t1_2=COMPLICATED_DATE_FORMAT.parse("2017-04-28"+" "+"17:10:00");
+//			
+			t1_1=COMPLICATED_DATE_FORMAT.parse("2017-06-02"+" "+"07:50:00");
+			t1_2=COMPLICATED_DATE_FORMAT.parse("2017-06-02"+" "+"11:49:00");
 //			t1_1=null;
 //			t1_2=null;
-//			t1_3=COMPLICATED_DATE_FORMAT.parse("2017-03-21"+" "+"13:31:00");
-//			t1_4=COMPLICATED_DATE_FORMAT.parse("2017-03-21"+" "+"16:11:00");
+			t1_3=COMPLICATED_DATE_FORMAT.parse("2017-06-02"+" "+"12:55:00");
+			t1_4=COMPLICATED_DATE_FORMAT.parse("2017-06-02"+" "+"13:55:00");
 //			t1_5=COMPLICATED_DATE_FORMAT.parse("2017-03-21"+" "+"20:30:00");
 //			t1_6=COMPLICATED_DATE_FORMAT.parse("2017-03-22"+" "+"01:11:00");
 			caseNo = buildCaseNoFromMethodName(Thread.currentThread().getStackTrace()[1].getMethodName());
@@ -2981,9 +2981,9 @@ public class attendanceTest extends BaseTestCase{
 //			dao.UpdateRule(ruleId3, employeeId2);
 //			dao.UpdateRule(ruleId3, employeeId);
 			if(t1_1!=null||t1_2!=null){
-			attendanceCreate(1);
-//			attendanceCreate(2);
-//			attendanceCreate(3);
+				attendanceCreate_special(1);
+				attendanceCreate_special(2);
+//			attendanceCreate_special(3);
 			}else{
 				Date createoneday=SIMPLE_DATE_FORMAT.parse("2017-03-31");
 				CreateRecreationModel createrecreation =new CreateRecreationModel();

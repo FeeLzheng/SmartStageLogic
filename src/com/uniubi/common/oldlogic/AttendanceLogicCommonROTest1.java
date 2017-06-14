@@ -670,13 +670,13 @@ public class AttendanceLogicCommonROTest1 extends OldBaseTestCase{
 	
 		
 		//更新请假流程
-		dao.ProcedureCreate(e1,f1,procedureId1);
+		dao.ProcedureCreate(e1,f1,procedureId1,employeeId,2);
 		//更新第一天已发起的补签流程1
-		dao.RepairCreate(r1_1,repairProcedureId1_1);
+		dao.RepairCreate(r1_1,repairProcedureId1_1,employeeId);
 		//更新第一天已发起的补签流程1
-		dao.RepairCreate(r1_2,repairProcedureId1_2);
+		dao.RepairCreate(r1_2,repairProcedureId1_2,employeeId);
 		//更新第一天已发起的出差流程
-		dao.OutworkCreate(o1_1,o1_2,outworkProcedureId);
+		dao.OutworkCreate(o1_1,o1_2,outworkProcedureId,employeeId,6);
 		
 		attendancesCreate(1);
 
@@ -689,13 +689,13 @@ public class AttendanceLogicCommonROTest1 extends OldBaseTestCase{
 		AttendanceLogicCommonROTest1AssertBase.getInstance( A1, B1, t1_1, t1_n, e1, f1, e2, f2,r1_1,r1_2,r2_1,r2_2,employeeDay2,employeeNextDay2,caseNo).Testx_x(1);
 		if((e2 != null && f2 != null) || (r2_1 != null) || (o2_1 != null && o2_2 != null)){
 			//更新第二个流程
-			dao.ProcedureCreate(e2,f2,procedureId2);
+			dao.ProcedureCreate(e2,f2,procedureId2,employeeId,3);
 			//更新第一天补充发起的补签流程1
-			dao.RepairCreate(r2_1,repairProcedureId1r_1);
+			dao.RepairCreate(r2_1,repairProcedureId1r_1,employeeId);
 			//更新第一天补充发起的补签流程2
-			dao.RepairCreate(r2_2,repairProcedureId1r_1);
+			dao.RepairCreate(r2_2,repairProcedureId1r_1,employeeId);
 			//更新第一天补充发起的出差流程
-			dao.OutworkCreate(o2_1,o2_2,outworkProcedureId);
+			dao.OutworkCreate(o2_1,o2_2,outworkProcedureId,employeeId,6);
 			
 			
 
@@ -719,13 +719,13 @@ public class AttendanceLogicCommonROTest1 extends OldBaseTestCase{
 
 		
 		//更新请假流程
-		dao.ProcedureCreate(e1,f1,procedureId1);
+		dao.ProcedureCreate(e1,f1,procedureId1,employeeId,2);
 		//更新第一天已发起的补签流程1
-		dao.RepairCreate(r1_1,repairProcedureId1_1);
+		dao.RepairCreate(r1_1,repairProcedureId1_1,employeeId);
 		//更新第一天已发起的补签流程1
-		dao.RepairCreate(r1_2,repairProcedureId1_2);
+		dao.RepairCreate(r1_2,repairProcedureId1_2,employeeId);
 		//更新第一天已发起的出差流程
-		dao.OutworkCreate(o1_1,o1_2,outworkProcedureId);
+		dao.OutworkCreate(o1_1,o1_2,outworkProcedureId,employeeId,6);
 		
 
 		
@@ -737,13 +737,13 @@ public class AttendanceLogicCommonROTest1 extends OldBaseTestCase{
 		
 		if((e2 != null && f2 != null) || (r2_1 != null) || (o2_1 != null && o2_2 != null)){
 			//更新第二个流程
-			dao.ProcedureCreate(e2,f2,procedureId2);
+			dao.ProcedureCreate(e2,f2,procedureId2,employeeId,3);
 			//更新第一天补充发起的补签流程1
-			dao.RepairCreate(r2_1,repairProcedureId1r_1);
+			dao.RepairCreate(r2_1,repairProcedureId1r_1,employeeId);
 			//更新第一天补充发起的补签流程2
-			dao.RepairCreate(r2_2,repairProcedureId1r_1);
+			dao.RepairCreate(r2_2,repairProcedureId1r_1,employeeId);
 			//更新第一天补充发起的出差流程
-			dao.OutworkCreate(o2_1,o2_2,outworkProcedureId);
+			dao.OutworkCreate(o2_1,o2_2,outworkProcedureId,employeeId,6);
 			
 			
 
@@ -778,7 +778,7 @@ public class AttendanceLogicCommonROTest1 extends OldBaseTestCase{
 			if((e2 != null && f2 != null) || (r2_1 != null) || (o3_1 != null && o3_2 != null)){
 		
 				//更新第一天和第二天补充发起的出差流程
-				dao.OutworkCreate(o3_1,o3_2,outworkProcedureId);
+				dao.OutworkCreate(o3_1,o3_2,outworkProcedureId,employeeId,6);
 				
 				
 		
@@ -795,7 +795,7 @@ public class AttendanceLogicCommonROTest1 extends OldBaseTestCase{
 		public void Testx_x_5() throws Exception {
 			//插入打卡记录
 			
-			dao.OutworkCreate(o3_1,o3_2,outworkProcedureId);
+			dao.OutworkCreate(o3_1,o3_2,outworkProcedureId,employeeId,6);
 			
 
 			
@@ -817,7 +817,7 @@ public class AttendanceLogicCommonROTest1 extends OldBaseTestCase{
 			attendancesCreate(1);
 			
 		
-			dao.OutworkCreate(o3_1,o3_2,outworkProcedureId);
+			dao.OutworkCreate(o3_1,o3_2,outworkProcedureId,employeeId,6);
 			
 
 			

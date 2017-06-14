@@ -26,10 +26,9 @@ public class BaseTestCase extends TestCase {
 	 static SimpleDateFormat SIMPLE_DATE_FORMAT = new SimpleDateFormat(DATE_FORMAT_SIMPLE);
 	 static SimpleDateFormat COMPLICATED_DATE_FORMAT = new SimpleDateFormat(DATE_FORMAT_COMPLICATED);
 	 
-	 static final String yesterdayStr="2017-03-01";
-	 static final String dayStr="2017-03-04";
-	 static final String nextdayStr="2017-03-05";
-	 
+	 static final String yesterdayStr="2017-06-09";
+	 static final String dayStr="2017-06-10";
+	 static final String nextdayStr="2017-06-11";
 	 
 	 static final String A1Str="09:00:00";
 	 static final String B1Str="11:00:00";

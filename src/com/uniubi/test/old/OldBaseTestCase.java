@@ -19,9 +19,9 @@ public abstract class OldBaseTestCase extends TestCase {
 	 static final String DATE_FORMAT_COMPLICATED = "yyyy-MM-dd HH:mm:ss";
 	 static SimpleDateFormat SIMPLE_DATE_FORMAT = new SimpleDateFormat(DATE_FORMAT_SIMPLE);
 	 static SimpleDateFormat COMPLICATED_DATE_FORMAT = new SimpleDateFormat(DATE_FORMAT_COMPLICATED);
-	 static final String dayStr = "2017-03-02";//工作日
-	 static final String nextDayStr = "2017-03-03";//工作日
-	 static final String next2DayStr = "2017-03-04";//工作日
+	 static final String dayStr = "2017-06-08";//工作日
+	 static final String nextDayStr = "2017-06-09";//工作日
+	 static final String next2DayStr = "2017-06-12";//工作日
 	 static final String AStr = "10:00:00";
 	 static final String BStr = "20:00:00";
 	 static final String STARTStr = "03:00:00";

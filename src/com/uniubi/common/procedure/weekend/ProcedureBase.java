@@ -193,28 +193,36 @@ public class ProcedureBase{
 	
 	public void test1(){
 		System.out.println("对比总表的数据");
+		assertEquals(employeeday1.getdaytype(),2);
 	}
 	public void test2(){
-		System.out.println("对比分表1中的数据");		
+		System.out.println("对比分表1中的数据");	
+		assertEquals(employeeday2.getdaytype(),2);
 	}
 	public void test3(){
-		System.out.println("对比分表2中的数据");		
+		System.out.println("对比分表2中的数据");	
+		assertEquals(employeeday3.getdaytype(),2);
 	}
 	public void test4(){
-		System.out.println("对比分表3中的数据");		
+		System.out.println("对比分表3中的数据");	
+		assertEquals(employeeday4.getdaytype(),2);
 	}
 	
 	public void test1_1(){
 		System.out.println("对比只有请假数据无打卡的总表");
+		assertEquals(employeeday1.getdaytype(),2);
 	}
 	public void test2_1(){
-		System.out.println("对比只有请假数据无打卡的分表1");		
+		System.out.println("对比只有请假数据无打卡的分表1");	
+		assertEquals(employeeday2.getdaytype(),2);
 	}
 	public void test3_1(){
-		System.out.println("对比只有请假数据无打卡的分表2");		
+		System.out.println("对比只有请假数据无打卡的分表2");	
+		assertEquals(employeeday3.getdaytype(),2);
 	}
 	public void test4_1(){
-		System.out.println("对比只有请假数据无打卡的分表3");		
+		System.out.println("对比只有请假数据无打卡的分表3");	
+		assertEquals(employeeday4.getdaytype(),2);
 	}
 	
 	
@@ -253,6 +261,7 @@ public class ProcedureBase{
 		assertEquals(employeeday1.getLeaveDur(),0);
 		assertEquals(employeeday1.getNoShow(),1);
 		assertEquals(employeeday1.getAllLeaveDur(),0);
+		assertEquals(employeeday1.getdaytype(),2);
 		
 		
 	}
@@ -265,6 +274,7 @@ public class ProcedureBase{
 		assertEquals(employeeday2.getLeaveDur(),0);
 		assertEquals(employeeday2.getNoShow(),1);
 		assertEquals(employeeday2.getAllLeaveDur(),0);
+		assertEquals(employeeday2.getdaytype(),2);
 		
 		
 	}
@@ -277,6 +287,7 @@ public class ProcedureBase{
 		assertEquals(employeeday3.getLeaveDur(),0);
 		assertEquals(employeeday3.getNoShow(),1);
 		assertEquals(employeeday3.getAllLeaveDur(),0);
+		assertEquals(employeeday3.getdaytype(),2);
 		
 		
 	}
@@ -289,6 +300,7 @@ public class ProcedureBase{
 		assertEquals(employeeday4.getLeaveDur(),0);
 		assertEquals(employeeday4.getNoShow(),1);
 		assertEquals(employeeday4.getAllLeaveDur(),0);
+		assertEquals(employeeday4.getdaytype(),2);
 		
 		
 	}
@@ -299,20 +311,28 @@ public class ProcedureBase{
 		if(No==1){
 			System.out.println("对比总表的数据");
 			test1_1();
+			System.out.println("今天是休息日");
+			assertEquals(employeeday1.getdaytype(),2);
 			test1_employeeweekend();
 				} 
 		if(No==2){
 			System.out.println("对比分表1中的数据");	
 			test2_1();
+			System.out.println("今天是休息日");
+			assertEquals(employeeday1.getdaytype(),2);
 			test2_employeeweekend();}
 		if(No==3){
 			System.out.println("对比分表2中的数据");	
 			test3_1();	
+			System.out.println("今天是休息日");
+			assertEquals(employeeday1.getdaytype(),2);
 			test3_employeeweekend();
 		}
 		if(No==4){
 			System.out.println("对比分表3中的数据");	
 			test4_1();
+			System.out.println("今天是休息日");
+			assertEquals(employeeday1.getdaytype(),2);
 			test4_employeeweekend();
 		}
 		
